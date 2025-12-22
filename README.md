@@ -36,8 +36,8 @@ Set up a cron job to run the script daily at 3am (or time of your choice)
 If you ran a manual test before setting the cron of the same date, delete the files so the cron runs successfully.
 
 # DR suggestions:
-Set up a rule at s3 to replicate across s3 regions (eg, mainbucket is us-east-1, set automation rule to replicate to us-west-1)
+Set up a rule at s3 to replicate across s3 regions (eg, mainbucket is us-east-1, set automation rule to replicate to us-west-1 bucket in your account and set it to glacier to save costs)
 
 # Use of other cloud services
-The s3cmd line can be changes to execute any other command line to put or sync to that cloud service.  Follow that service's api and tool kit/sdk.
+The s3cmd line can be changed to execute any other command line to put or sync to that cloud service.  Follow that service's api and tool kit/sdk.
 
