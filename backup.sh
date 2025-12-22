@@ -29,13 +29,14 @@ S3BUCKET="s3://yourbucketname"
 
 # begin main script
 
-#log path
-statuspath=$path"logs/"
-STATUS=$statuspath"statusfile.$datenow.log"
+
 datenow=`date +"%Y%m%d"`
 dayofmonth=$(date +%d)
 dayofweek=$(date +%u)
 
+#log path
+statuspath=$path"logs/"
+STATUS=$statuspath"statusfile.$datenow.log"
 
 
 echo "Beginning Backup Setup"
