@@ -1,12 +1,13 @@
 # serverbackup
 Backup for centmin server muti-site to both local storage for quick restore and to S3 for long term storage/DR perspective.
 
-iterates through all domains and databases at the account level.
+Iterates through all domains and databases at the account level.  Skips demo and default centmin stuff to save space/time.
 
 set permissions/users at the account level to perform these operations.  SECURE THIS SCRIPT as it will contain high access rights.
 NEVER run this script in a web-accessible area (run above the nginx area)
 
-stores 7 days, moves to weekly, weekly moves to monthly, monthly moves to yearly.
+Stores 7 days daily.  Sunday file moves to weekly.  Last Weekly moves to Monthly.  Last Monthly (Dec) moves to yearly.
+This keeps a running history with emphasis on more local instances with the ability to back trace as needed for a year.   If you want to keep more than year, move them to a different bucket/folder so the s3cmd sync command doesn't delete it.
 
 Never grows too large once you hit the 1 year mark in terms of file count.
 
