@@ -1,5 +1,5 @@
 # serverbackup
-Backup for centmin server muti-site to both local storage for quick restore and to S3 for long term storage/DR perspective.
+Backup for centmin server multi-site to both local storage for quick restore and to S3 for long term storage/DR perspective.
 
 Iterates through all domains and databases at the account level.  Skips demo and default centmin stuff to save space/time.
 
